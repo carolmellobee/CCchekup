@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Ledger</title>
+<meta name="description" content="Ledger is a client-side credit card statement analyser built by Carol Mello, a data engineer.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="About — Ledger">
+<meta property="og:description" content="Ledger is a client-side credit card statement analyser built by Carol Mello, a data engineer.">
+<meta property="og:type" content="profile">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2032%2032%27%20xmlns%3Ac2pa%3D%27http%3A//c2pa.org/manifest%27%3E%3Cmetadata%3E%3Cc2pa%3Amanifest%3EAAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo5YWRkZmIwMS0xM2NkLTQzZGQtYThkNi05NzkzZTc2NTI1YjIAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaKTtLu1qQdlkBLIhzlqxNBcAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDoxZDY5MmZkMS05NzA3LTQ1YzMtOWE5MS03NzA0ZTU2ODY4NDNscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo5vJqz5f/S/f0k4eUDf4XUgAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggcjTQEF6f8s%2BcNsAoJKrD0VBnR8wx%2B9kNLuP3eT3ikaKkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaPWiUGMMIjjE8b1ZZ8sw2uAAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCCz7eBwwPTKCVlylJQPN54dbQMUYpQrA39Ui2q9EXJgF2RuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBh7Zmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjlhZGRmYjAxLTEzY2QtNDNkZC1hOGQ2LTk3OTNlNzY1MjViMi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmU1YjA1MTA3LTdjMzAtNDgyYi1iMjg5LWY0NjMwNDA5OWI5MnJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCByNNAQXp/yz5w2wCgkqsPRUGdHzDH72Q0u4/d5PeKRoqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggsiEzsP5VKFhhqXmtZ/m8tOf4pzT3tz7IEQjANSOIAFyiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggf49BaZ5TG2UyPecirgbeiuI%2B/3yZHBGmj21VK6zTWd50Y2xhaW1fZ2VuZXJhdG9yX2luZm%2BjZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj%2BOPEz5o%2BnMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1%2BUCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9%2B1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQOFL80KsGyq0YO6mkavR2tHVhTrtJE12HWXb58fu4%2BgTAUq87%2Bg3rq6O8E6naB%2BIW4t0X7vpI4lrbX1ltRrIPSE%3D%3C/c2pa%3Amanifest%3E%3C/metadata%3E%20%20%3Crect%20width%3D%2732%27%20height%3D%2732%27%20rx%3D%273%27%20fill%3D%27%23e9ebe4%27/%3E%20%20%3Crect%20y%3D%277%27%20%20width%3D%2732%27%20height%3D%274%27%20fill%3D%27%23dfe6d9%27/%3E%20%20%3Crect%20y%3D%2715%27%20width%3D%2732%27%20height%3D%274%27%20fill%3D%27%23dfe6d9%27/%3E%20%20%3Crect%20y%3D%2723%27%20width%3D%2732%27%20height%3D%274%27%20fill%3D%27%23dfe6d9%27/%3E%20%20%3Crect%20x%3D%276%27%20y%3D%2720%27%20width%3D%274%27%20height%3D%277%27%20fill%3D%27%232b4c7e%27/%3E%20%20%3Crect%20x%3D%2713%27%20y%3D%2714%27%20width%3D%274%27%20height%3D%2713%27%20fill%3D%27%232b4c7e%27/%3E%20%20%3Crect%20x%3D%2720%27%20y%3D%278%27%20%20width%3D%274%27%20height%3D%2719%27%20fill%3D%27%23a8362b%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Design tokens — "ledger paper": accounting green-bar stock,
+   stamp-red debits, ink-blue interaction.
+   ============================================================ */
+:root{
+  --paper:#e9ebe4;
+  --sheet:#f7f8f4;
+  --band:#dfe6d9;          /* green-bar stripe */
+  --rule:#c3cbba;
+  --rule-soft:#dae0d2;
+  --ink:#232b26;
+  --ink-2:#5c665d;
+  --ink-3:#8a9389;
+  --blue:#2b4c7e;
+  --blue-soft:#e3e9f2;
+  --debit:#a8362b;
+  --credit:#2f6b4f;
+  --warn:#8a6212;
+  --warn-soft:#f5ecd6;
+  --radius:3px;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --sans:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:14px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+button,input,select,textarea{font:inherit;color:inherit}
+a{color:var(--blue)}
+
+/* ---------- shell ---------- */
+.shell{display:grid;grid-template-columns:224px 1fr;min-height:100vh;
+  background:linear-gradient(90deg,var(--sheet) 0 224px,var(--paper) 224px)}
+.rail{
+  border-right:1px solid var(--rule);
+  background:var(--sheet);
+  padding:22px 0 30px;
+  position:sticky;top:0;height:100vh;overflow:auto;
+}
+.brand{padding:0 20px 20px;border-bottom:1px solid var(--rule-soft);margin-bottom:14px}
+.brand h1{
+  font-family:var(--display);font-weight:700;font-size:23px;
+  letter-spacing:-.025em;margin:0;line-height:1.05;
+}
+.brand p{margin:5px 0 0;font-size:11.5px;color:var(--ink-3);line-height:1.35}
+nav{display:flex;flex-direction:column}
+.tab{
+  display:flex;align-items:baseline;gap:9px;
+  background:none;border:0;border-left:3px solid transparent;
+  padding:9px 20px;text-align:left;cursor:pointer;color:var(--ink-2);
+  font-size:13.5px;
+}
+.tab:hover{background:#eef0e9;color:var(--ink)}
+.tab[aria-selected="true"]{border-left-color:var(--blue);color:var(--ink);font-weight:600;background:#eaeee7}
+.tab .n{font-family:var(--mono);font-size:10.5px;color:var(--ink-3)}
+.tab:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,
+[tabindex]:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.rail-foot{margin-top:20px;padding:14px 20px 0;border-top:1px solid var(--rule-soft);font-size:11.5px;color:var(--ink-3)}
+.rail-foot strong{display:block;color:var(--ink-2);font-weight:600;margin-bottom:3px}
+
+main{padding:30px 34px 90px;max-width:1240px}
+.panel[hidden]{display:none}
+.head{margin-bottom:22px}
+.head h2{font-family:var(--display);font-weight:700;font-size:27px;letter-spacing:-.02em;margin:0 0 4px}
+.head p{margin:0;color:var(--ink-2);max-width:64ch}
+
+/* ---------- cards / blocks ---------- */
+.card{background:var(--sheet);border:1px solid var(--rule);border-radius:var(--radius);padding:18px 20px;margin-bottom:16px}
+.card > h3{font-family:var(--display);font-size:15px;font-weight:600;margin:0 0 3px}
+.card > h3 + .sub{margin:0 0 14px;color:var(--ink-3);font-size:12.5px}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:1000px){.g3,.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){
+  .shell{grid-template-columns:1fr}
+  .rail{position:static;height:auto;border-right:0;border-bottom:1px solid var(--rule)}
+  nav{flex-direction:row;overflow:auto}
+  .tab{border-left:0;border-bottom:3px solid transparent;white-space:nowrap}
+  .tab[aria-selected="true"]{border-left:0;border-bottom-color:var(--blue)}
+  .rail-foot{display:none}
+  main{padding:20px 16px 70px}
+  .g2,.g3,.g4{grid-template-columns:1fr}
+}
+
+/* ---------- the signature block: locked statement ---------- */
+.dropzone{
+  position:relative;border:1px solid var(--rule);border-radius:var(--radius);
+  background:
+    repeating-linear-gradient(var(--sheet) 0 26px, var(--band) 26px 52px);
+  padding:0;overflow:hidden;
+}
+.dropzone.over{border-color:var(--blue);box-shadow:inset 0 0 0 2px var(--blue-soft)}
+.dz-inner{padding:40px 30px;text-align:center;background:rgba(247,248,244,.62)}
+.lock{
+  width:46px;height:46px;margin:0 auto 14px;display:block;
+}
+.dz-inner h3{font-family:var(--display);font-size:21px;font-weight:700;margin:0 0 6px;letter-spacing:-.015em}
+.dz-inner p{margin:0 auto 18px;color:var(--ink-2);max-width:52ch;font-size:13px}
+.pwrow{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
+input[type=text],input[type=password],input[type=number],select,textarea{
+  background:#fff;border:1px solid var(--rule);border-radius:var(--radius);padding:7px 10px;
+}
+input[type=password],input[type=text].pw{font-family:var(--mono);letter-spacing:.04em;min-width:230px}
+.btn{
+  background:var(--blue);color:#fff;border:1px solid var(--blue);
+  border-radius:var(--radius);padding:8px 16px;cursor:pointer;font-weight:500;
+}
+.btn:hover{background:#22406c}
+.btn.ghost{background:transparent;color:var(--blue)}
+.btn.ghost:hover{background:var(--blue-soft)}
+.btn.small{padding:4px 10px;font-size:12.5px}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.hint{font-size:12px;color:var(--ink-3)}
+
+/* ---------- file list ---------- */
+.files{list-style:none;margin:0;padding:0}
+.files li{
+  display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;
+  padding:11px 0;border-bottom:1px solid var(--rule-soft);
+}
+.files li:last-child{border-bottom:0}
+.fname{font-weight:500;word-break:break-all}
+.fmeta{font-size:12px;color:var(--ink-2);font-family:var(--mono)}
+.status{font-size:11.5px;font-family:var(--mono);padding:2px 7px;border-radius:2px;white-space:nowrap}
+.st-ok{background:#e0eee7;color:var(--credit)}
+.st-err{background:#f4e2e0;color:var(--debit)}
+.st-warn{background:var(--warn-soft);color:var(--warn)}
+.st-busy{background:var(--blue-soft);color:var(--blue)}
+.st-lock{background:#eae7dc;color:#6b5f3b}
+
+/* ---------- KPIs ---------- */
+.kpi{background:var(--sheet);border:1px solid var(--rule);border-radius:var(--radius);padding:14px 16px}
+.kpi .lab{font-size:12px;color:var(--ink-2);margin-bottom:6px}
+.kpi .val{font-family:var(--mono);font-size:23px;font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.kpi .delta{font-family:var(--mono);font-size:12px;margin-top:4px}
+.up{color:var(--debit)} .down{color:var(--credit)} .flat{color:var(--ink-3)}
+
+/* ---------- tables ---------- */
+.tablewrap{overflow:auto;border:1px solid var(--rule);border-radius:var(--radius);background:var(--sheet)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{
+  text-align:left;font-weight:600;font-size:12px;color:var(--ink-2);
+  padding:9px 12px;border-bottom:1px solid var(--rule);background:var(--sheet);
+  position:sticky;top:0;z-index:1;white-space:nowrap;
+}
+th.sortable{cursor:pointer;user-select:none}
+th.sortable:hover{color:var(--ink)}
+td{padding:8px 12px;border-bottom:1px solid var(--rule-soft);vertical-align:top}
+tbody tr:nth-child(even){background:var(--band)}
+tbody tr:hover{background:var(--blue-soft)}
+.num{font-family:var(--mono);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.desc{max-width:340px}
+td select{padding:2px 5px;font-size:12px;background:transparent;border-color:var(--rule-soft)}
+.tag{display:inline-block;font-size:11px;font-family:var(--mono);background:#e6e9e0;border:1px solid var(--rule-soft);padding:1px 5px;border-radius:2px;color:var(--ink-2)}
+
+/* ---------- bars ---------- */
+.barlist{margin:0;padding:0;list-style:none}
+.barlist li{margin-bottom:10px}
+.barlist .top{display:flex;justify-content:space-between;gap:12px;font-size:13px;margin-bottom:3px}
+.barlist .top .v{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.track{height:7px;background:#dfe2d9;border-radius:1px;overflow:hidden}
+.fill{height:100%;background:var(--blue)}
+
+canvas{max-width:100%}
+.chartbox{position:relative;height:280px}
+.chartbox.tall{height:330px}
+
+/* ---------- misc ---------- */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.toolbar input[type=text]{min-width:200px}
+.empty{border:1px dashed var(--rule);border-radius:var(--radius);padding:34px 22px;text-align:center;color:var(--ink-2);background:var(--sheet)}
+.empty strong{display:block;font-family:var(--display);font-size:16px;color:var(--ink);margin-bottom:5px}
+.note{border-left:3px solid var(--warn);background:var(--warn-soft);padding:10px 14px;border-radius:0 var(--radius) var(--radius) 0;font-size:13px;margin-bottom:14px}
+.note.blue{border-left-color:var(--blue);background:var(--blue-soft)}
+.note b{font-weight:600}
+details{border:1px solid var(--rule-soft);border-radius:var(--radius);padding:10px 12px;background:var(--sheet);margin-bottom:12px}
+summary{cursor:pointer;font-weight:500;font-size:13px}
+pre.raw{
+  font-family:var(--mono);font-size:11.5px;line-height:1.55;background:#fff;border:1px solid var(--rule-soft);
+  padding:12px;max-height:420px;overflow:auto;white-space:pre-wrap;word-break:break-word;margin:10px 0 0;
+}
+pre.raw mark{background:#d7e7cf;color:var(--ink)}
+.modelrow{display:grid;grid-template-columns:1.4fr repeat(3,minmax(0,1fr));gap:10px;align-items:center;padding:9px 0;border-bottom:1px solid var(--rule-soft);font-size:13px}
+.modelrow:last-child{border-bottom:0}
+.modelrow .m{font-weight:500}
+.modelrow .m small{display:block;font-weight:400;color:var(--ink-3);font-size:11.5px;line-height:1.35}
+.modelrow .num{text-align:right}
+.badge{font-family:var(--mono);font-size:10.5px;background:var(--blue);color:#fff;padding:1px 5px;border-radius:2px;margin-left:6px}
+.spinner{display:inline-block;width:12px;height:12px;border:2px solid var(--blue-soft);border-top-color:var(--blue);border-radius:50%;animation:spin .7s linear infinite;vertical-align:-2px}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ============================================================
+   About page
+   ============================================================ */
+.tab-link{text-decoration:none}
+.tab-link[aria-current="page"]{border-left-color:var(--blue);color:var(--ink);font-weight:600;background:#eaeee7}
+@media(max-width:760px){.tab-link[aria-current="page"]{border-left:0;border-bottom-color:var(--blue)}}
+
+.prose{max-width:66ch}
+.bio-head{display:flex;align-items:center;gap:16px;margin-bottom:26px;padding-bottom:20px;border-bottom:1px solid var(--rule)}
+.bio-mark{
+  width:56px;height:56px;flex:0 0 56px;border-radius:2px;
+  display:grid;place-items:center;background:var(--blue);color:#fff;
+  font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:.02em;
+}
+.bio-head h2{font-family:var(--display);font-size:29px;font-weight:700;letter-spacing:-.02em;margin:0}
+.bio-head .role{margin:2px 0 0;color:var(--ink-2);font-family:var(--mono);font-size:12.5px}
+.prose .lede{font-size:17.5px;line-height:1.5;color:var(--ink);margin:0 0 20px}
+.prose p{margin:0 0 15px;color:var(--ink-2);line-height:1.62}
+.prose h3{
+  font-family:var(--display);font-size:15px;font-weight:600;color:var(--ink);
+  margin:28px 0 10px;padding-top:16px;border-top:1px solid var(--rule-soft);
+}
+.prose .cta{margin-top:30px}
+.prose .cta .btn{display:inline-block;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="shell">
+  <aside class="rail">
+    <div class="brand">
+      <h1>Ledger</h1>
+      <p>Statement analysis that never leaves this browser tab.</p>
+    </div>
+    <nav aria-label="Sections">
+      <a class="tab tab-link" href="index.html">Dashboard</a>
+      <a class="tab tab-link" href="about.html" aria-current="page">About</a>
+    </nav>
+    <div class="rail-foot">
+      <strong>Nothing is uploaded</strong>
+      PDFs are decrypted and parsed locally with pdf.js. Close the tab and the data is gone.
+    </div>
+  </aside>
+
+  <main>
+    <article class="prose">
+      <header class="bio-head">
+        <div class="bio-mark" aria-hidden="true">CM</div>
+        <div>
+          <h2>Carol Mello</h2>
+          <p class="role">Data Engineer</p>
+        </div>
+      </header>
+
+      <p class="lede">I built Ledger because I wanted a page that lets you understand an analytics
+      dashboard by using one, rather than by reading about one.</p>
+
+      <p>Most explanations of dashboards are written for people who already have the data. You get a
+      screenshot, a list of chart types, and no way to find out what any of it would say about your own
+      situation. That gap is what this is aimed at. You bring a file you already have — a credit card
+      statement, locked, exactly as your bank sent it — and the page turns it into the thing being
+      explained. The dashboard and the tutorial are the same object.</p>
+
+      <p>The subject comes from years of studying and building data analytics visualisation. The
+      technical foundation comes from my work in data engineering and AI. I'm interested in the
+      question the RAG and LLM era has made unavoidable: when a system produces an answer, how does the
+      person on the other side judge whether to believe it? Retrieval-augmented systems answered that
+      with citations. A dashboard has no equivalent convention, so I tried to build one here.</p>
+
+      <h3>What that looks like in practice</h3>
+
+      <p>Every number on this page is meant to be traceable back to the line in the PDF that produced
+      it. The Statements tab has a parser view that highlights precisely which lines were read as
+      transactions, so a wrong total is a thing you can see rather than a thing you have to trust. Each
+      file is reconciled against the invoice total the statement itself declares — if the parser and
+      your bank disagree, the page says so instead of quietly showing a plausible number.</p>
+
+      <p>The forecast tab follows the same rule. Four models compete on your own history, each scored
+      by walk-forward backtesting, and the error of each one is shown next to its prediction. When a
+      three-month median beats a trend model, that tells you something real about your spending. The
+      most reliable line on that chart isn't a forecast at all — it's your remaining instalments, which
+      are already contracted and need no model.</p>
+
+      <h3>How it actually works</h3>
+
+      <p>Worth being plain about this, because the words above could suggest otherwise: Ledger does not
+      call a language model and does not perform retrieval. It is deterministic — pdf.js decrypts and
+      extracts text, rule-based patterns identify transaction lines, keyword rules assign categories,
+      and the forecasts are ordinary least squares, Holt exponential smoothing, month-of-year
+      seasonality, and a robust median, combined by inverse-error weighting. The LLM connection is in
+      the design question, not the implementation.</p>
+
+      <h3>Privacy</h3>
+
+      <p>Statements are among the most revealing documents a person owns. Nothing here is uploaded:
+      files are read in the browser, PDF passwords never leave the page, there is no backend, no
+      account, no analytics and no logging. Nothing persists between sessions either, which is a real
+      cost — export to JSON before you close the tab if you want to keep your work.</p>
+
+      <p class="cta"><a class="btn" href="index.html">Open the dashboard</a></p>
+    </article>
+  </main>
+</div>
+</body>
+</html>

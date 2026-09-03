@@ -1,0 +1,21 @@
+# Vercel
+.vercel
+
+# Node (only needed if you add a dev server or tests)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# NEVER commit real statements or exports — these contain financial data
+*.pdf
+*.xlsx
+*.csv
+ledger-export*.json
+/samples/
