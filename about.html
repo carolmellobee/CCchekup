@@ -240,6 +240,15 @@ pre.raw mark{background:#d7e7cf;color:var(--ink)}
 }
 .prose .cta{margin-top:30px}
 .prose .cta .btn{display:inline-block;text-decoration:none}
+.site-link{margin:14px 0 0}
+.site-link a{
+  display:inline-block;font-family:var(--mono);font-size:13.5px;
+  color:var(--blue);text-decoration:none;
+  border:1px solid var(--rule);border-radius:var(--radius);
+  padding:9px 15px;background:var(--sheet);
+}
+.site-link a:hover{background:var(--blue-soft);border-color:var(--blue)}
+.site-link a::after{content:" \2197";font-size:12px;opacity:.65}
 </style>
 </head>
 <body>
@@ -313,6 +322,13 @@ pre.raw mark{background:#d7e7cf;color:var(--ink)}
       files are read in the browser, PDF passwords never leave the page, there is no backend, no
       account, no analytics and no logging. Nothing persists between sessions either, which is a real
       cost — export to JSON before you close the tab if you want to keep your work.</p>
+
+      <h3>More of my work</h3>
+
+      <p>Ledger is one of several things I have built. The rest of my projects — data work and
+      otherwise — live on my site.</p>
+
+      <p class="site-link"><a href="https://carolmello.vercel.app/" rel="me noopener noreferrer" target="_blank">carolmello.vercel.app</a></p>
 
       <p class="cta"><a class="btn" href="index.html">Open the dashboard</a></p>
     </article>

@@ -4,7 +4,7 @@ A credit card statement analyser that runs entirely in the browser. Drop in the 
 bank sent you — password-protected ones included — and get spending analysis and a forecast. No
 backend, no upload, no account.
 
-Built by [Carol Mello](/about), data engineer.
+Built by Carol Mello, data engineer — [carolmello.vercel.app](https://carolmello.vercel.app/)
 
 ---
 
@@ -180,6 +180,11 @@ the CSP does not need `'unsafe-inline'` for scripts.
 ## Licence
 
 MIT. See `LICENSE`.
+
+## More of my work
+
+Ledger is one of several things I have built. The rest of my projects — data work and otherwise —
+live at [carolmello.vercel.app](https://carolmello.vercel.app/).
 
 ## Credits
 
