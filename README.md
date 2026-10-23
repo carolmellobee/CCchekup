@@ -181,6 +181,11 @@ the CSP does not need `'unsafe-inline'` for scripts.
 
 MIT. See `LICENSE`.
 
+## Get in touch
+
+- LinkedIn — [carol-mello-0707352b](https://www.linkedin.com/in/carol-mello-0707352b)
+- GitHub — [carolmellobee](https://github.com/carolmellobee)
+
 ## More of my work
 
 Ledger is one of several things I have built. The rest of my projects — data work and otherwise —

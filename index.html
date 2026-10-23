@@ -249,6 +249,17 @@ pre.raw mark{background:#d7e7cf;color:var(--ink)}
 }
 .site-link a:hover{background:var(--blue-soft);border-color:var(--blue)}
 .site-link a::after{content:" \2197";font-size:12px;opacity:.65}
+.contacts{list-style:none;margin:14px 0 0;padding:0;max-width:30rem}
+.contacts li{border-bottom:1px solid var(--rule-soft)}
+.contacts li:first-child{border-top:1px solid var(--rule-soft)}
+.contacts a{
+  display:flex;align-items:center;gap:11px;padding:11px 2px;
+  color:var(--ink);text-decoration:none;font-family:var(--mono);font-size:13px;
+}
+.contacts a:hover{color:var(--blue)}
+.contacts svg{flex:0 0 17px;width:17px;height:17px;fill:var(--ink-2)}
+.contacts a:hover svg{fill:var(--blue)}
+.contacts .host{color:var(--ink-3)}
 </style>
 </head>
 <body>
